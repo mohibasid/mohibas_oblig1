@@ -1,2 +1,2 @@
 # Prosjekter
-Her vil jeg legge ut en samling av tidligere gjennomførte prosjekter.
+Her vil jeg legge ut tidligere gjennomførte prosjekter.

@@ -113,6 +113,7 @@ Palindrom Ikke palindrom
 **Button**(1) skal kjøre en funksjon som sjekker om gitt input er et palindrom eller ikke.
 
 **Text** som viser resultat:
+
 ● Skal vise til brukeren om input er et palindrom eller ikke.
 
 **Button**(2) sender brukeren til neste skjerm:
@@ -210,7 +211,6 @@ Spørsmål-objektene skal inneholde en string: spørsmålet, og boolean: sann/us
 Spørsmålene må du lage selv, og det skal være minimum tre spørsmål.
 
 ###Tips:
-  
 ● Basert på en indeks i QuizUiState (counter) kan Text(1) vise gjeldende
 spørsmål.
 

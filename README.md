@@ -210,7 +210,8 @@ data i denne hvis nødvendig. Opprett en data class kalt Question.
 Spørsmål-objektene skal inneholde en string: spørsmålet, og boolean: sann/usann.
 Spørsmålene må du lage selv, og det skal være minimum tre spørsmål.
 
-###Tips:
+### Tips:
+  
 ● Basert på en indeks i QuizUiState (counter) kan Text(1) vise gjeldende
 spørsmål.
 

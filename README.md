@@ -11,7 +11,9 @@ godkjent må alle deloppgaver være gjort og appen skal kunne kjøres i en emula
 med API-level 30 uten å krasje. Under retting vil en Google Pixel 5 emulator med
 API level 30 benyttes. Hvis du tester på egen Android-enhet, spesifiser
 Android-versjon i kommentarfeltet på Devilry.
-Oppgaven
+
+## Oppgaven
+
 Oppgaven er tredelt: du skal lage en app med tre ulike funksjonaliteter.
 Hver funksjonalitet skal være i hver sin Screen. Navigasjon imellom disse skal skje
 med navigasjonsbiblioteket til Compose.
@@ -81,7 +83,7 @@ fila og en tekst som sier hvilken skjerm man er på.
 F.eks. så skal du ha en composable-funksjon med navn PalindromeScreen som
 inneholder en “Text” der det står “PalindromeScreen” i PalindromeScreen.kt.
 
-##Sette opp navigasjon
+## Sette opp navigasjon
 For å navigere mellom skjermene skal du benytte deg av compose sitt
 navigasjonsbibliotek. Du trenger ikke å gjøre dette for å begynne og lage skjermene,
 du kan lage skjermene for alle deloppgavene allerede nå hvis du ønsker.
@@ -193,7 +195,6 @@ feilmelding i form av en Snackbar.
 
 ● Text skal vise det konverterte
 resultatet.
-
 
 ● Button(2) skal sende brukeren til
 neste aktivitet. Button(2) skal

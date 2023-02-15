@@ -1,6 +1,6 @@
 # mohibas_oblig1 - Obligatorisk innlevering
 
-Introduksjon
+#Introduksjon
 
 I denne obligen skal du lage en applikasjon i Android Studio. Her vil du bli kjent
 med forskjellige verktøy, og noen nyttige komponenter som ofte brukes i
@@ -18,68 +18,88 @@ med navigasjonsbiblioteket til Compose.
 1. Lage en palindrom-sjekker.
 2. Lage en konverterer.
 3. Bruke objektorientering til å lage en liten quiz.
-Levering
+
+##Levering
+
 Trykk på “Build” → “Clean Project”, deretter skal mappen som inneholder Android
 Studio-prosjektet skal komprimeres til en zip/tar-fil, og leveres i Devilry innen
 fristen fredag 10. februar 23:59.
-1
-Nyttige ressurser
+
+
+##Nyttige ressurser
+
 ● https://developer.android.com/jetpack/compose/tutorial
-● https://developer.android.com/reference/kotlin/androidx/compose/material3/pa
-ckage-summary
-● https://developer.android.com/reference/kotlin/androidx/compose/material3/pa
-ckage-summary#ExposedDropdownMenuBox(kotlin.Boolean,kotlin.Function1
-,androidx.compose.ui.Modifier,kotlin.Function1)
+
+● https://developer.android.com/reference/kotlin/androidx/compose/material3/package-summary
+
+● https://developer.android.com/reference/kotlin/androidx/compose/material3/package-summary#ExposedDropdownMenuBox(kotlin.Boolean,kotlin.Function1,androidx.compose.ui.Modifier,kotlin.Function1)
+
 ● Navigasjon mellom skjermer:
 https://developer.android.com/jetpack/compose/navigation
+
 ● https://m3.material.io/components/snackbar/overview
-Komme i gang
+
+##Komme i gang
+
 Opprett et nytt Android Studio-prosjekt, sett prosjektnavn til:
 [ditt uio-brukernavn]_oblig1.
+
 Videre velger du “Empty Compose Activity (Material 3)” og “Kotlin” som
 programmeringsspråk.
+
 Velg API 23 som target SDK/Minimum API Level.
-Versjoner og gradle
+
+##Versjoner og gradle
+
 Siden versjonene som automatisk settes på de forskjellige pakkene av android studio
 når prosjektet opprettes kan avvike med de som er i dokumentasjonen kan det oppstå
 problemer med å benytte seg av eksempler fra dokumentasjonen. Det kan derfor
 hende man må gjøre noe i byggsystemet gradle sine konfigurasjonsfiler for å få
 eksemplene til å funke. Sørg for at du har nyeste versjon av android studio installert
 (electric eel). Dersom du får problemer burde endringene under fikse det
+
 I build.gradle modul-filen kan man trenge å endre compose sin kompilator
 (kotlinCompilerExtensionVersion) fra versjon 1.2.0 til 1.4.0. Per dags dato er den
 nyeste versjonen av material3 1.1.0-alpha05 så oppdater også denne.
 I prosjektet sin build.gradle endre “compose_version” til 1.3.3 Endre også
 avhengigheten org.jetbrains.kotlin.android til 1.8.0 i denne fila.
-2
-Del 0 - Forberede filer og sette opp navigasjon
+
+##Del 0 - Forberede filer og sette opp navigasjon
+
 Start med å lage tre sub-pakker i ui-mappen for hver av deloppgavene. Opprett
 deretter 3 filer i hver av disse mappene slik at filstiene blir som følger:
+
 - ui/palindrom/PalindromeScreen.kt
 - ui/unitconverter/UnitConverterScreen.kt
 - ui/quiz/QuizScreen.kt
+
 Eksempelet viser altså tre mapper (palindrom, unitconverter og quiz) som hver har en
 Kotlin-fil i seg. I hver av disse filene skal du ha en composable med samme navn som
 fila og en tekst som sier hvilken skjerm man er på.
+
 F.eks. så skal du ha en composable-funksjon med navn PalindromeScreen som
 inneholder en “Text” der det står “PalindromeScreen” i PalindromeScreen.kt.
-Sette opp navigasjon
+
+##Sette opp navigasjon
 For å navigere mellom skjermene skal du benytte deg av compose sitt
 navigasjonsbibliotek. Du trenger ikke å gjøre dette for å begynne og lage skjermene,
 du kan lage skjermene for alle deloppgavene allerede nå hvis du ønsker.
+
 Det skal settes opp 3 navigasjons-ruter:
+
 - “palindrome” skal kobles opp til PalindromeScreen()-funksjonen
 - “unitconverter” skal kobles opp til UnitConverterScreen()-funksjonen
-- “quiz” skal kobles opp til QuizScreen()-funksjonen
-der “palindrome” skal være satt som startDestination.
-3
-Del 1 - Palindrom
+- “quiz” skal kobles opp til QuizScreen()-funksjonen der “palindrome” skal være satt som startDestination.
+
+##Del 1 - Palindrom
 I denne deloppgaven skal du lage den første skjermen: en palindrom-sjekker som
 skal hete PalindromeScreen. Denne skjermen skal kort forklart: ta input fra bruker,
 sjekke om input er et palindrom eller ikke og vise resultatet til brukeren.
 Et palindrom er et stykke tekst som er identisk sett både forfra og bakfra. I denne
 oppgaven skal dere se bort fra om bokstavene er store eller små, slik at strengen
-“Hannah” er et palindrom. Eksempler:
+“Hannah” er et palindrom. 
+
+Eksempler:
 Palindrom Ikke palindrom
 “bob” “ivar”
 “Hannah” “Alpakka”

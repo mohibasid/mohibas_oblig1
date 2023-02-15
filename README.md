@@ -1,6 +1,6 @@
 # mohibas_oblig1 - Obligatorisk innlevering
 
-#Introduksjon
+# Introduksjon
 
 I denne obligen skal du lage en applikasjon i Android Studio. Her vil du bli kjent
 med forskjellige verktøy, og noen nyttige komponenter som ofte brukes i
@@ -19,14 +19,14 @@ med navigasjonsbiblioteket til Compose.
 2. Lage en konverterer.
 3. Bruke objektorientering til å lage en liten quiz.
 
-##Levering
+## Levering
 
 Trykk på “Build” → “Clean Project”, deretter skal mappen som inneholder Android
 Studio-prosjektet skal komprimeres til en zip/tar-fil, og leveres i Devilry innen
 fristen fredag 10. februar 23:59.
 
 
-##Nyttige ressurser
+## Nyttige ressurser
 
 ● https://developer.android.com/jetpack/compose/tutorial
 

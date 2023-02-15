@@ -108,18 +108,18 @@ Palindrom Ikke palindrom
 
 ### PalindromeScreen skal inneholde følgende composables og funksjonalitet
 
-### TextField skal ta input fra bruker.Skal ha en label som redegjør for hva brukeren skal skrive inn.
+**TextField** skal ta input fra bruker.Skal ha en label som redegjør for hva brukeren skal skrive inn.
 
-### Button(1) skal kjøre en funksjon som sjekker om gitt input er et palindrom eller ikke.
+**Button**(1) skal kjøre en funksjon som sjekker om gitt input er et palindrom eller ikke.
 
-### Text som viser resultat:
+**Text** som viser resultat:
 ● Skal vise til brukeren om input er et palindrom eller ikke.
 
-### Button(2) sender brukeren til neste skjerm:
+**Button**(2) sender brukeren til neste skjerm:
 ● Knappen skal plasseres helt nederst på
 skjermen.
 
-● Knappen skal være like bred som
+● **Knappen** skal være like bred som
 skjermen.
 
 ### Viktig:
@@ -129,8 +129,7 @@ skjermen.
 trykker på Button(1).
 
 ● Legg til funksjonalitet som gjør at skjermtastaturet lukker seg når brukeren
-trykker på Button(1). Benytt dere av LocalFocusManager.current og
-localFocusManager.clearFocus()
+trykker på Button(1). Benytt dere av LocalFocusManager.current og localFocusManager.clearFocus()
 
 ### Filnavn:
 ui/palindrome/PalindromeScreen.kt
@@ -172,24 +171,24 @@ konverteringen skal vises i en Text-funksjon. Nederst på skjermen skal det vær
 Button(2) som sender brukeren til siste deloppgave (QuizScreen).
 
 ### ConverterScreen skal inneholde følgende composables og funksjonalitet
-● TextField skal ta input fra bruker.
+● **TextField** skal ta input fra bruker.
 Skal inneholde et hint som redegjør
 for hva brukeren skal skrive inn.
 
-● ExposedDropdownMenu som gjør
+● **ExposedDropdownMenu** som gjør
 det mulig å velge mellom de fire
 enhetene nevnt tidligere.
 
-● Button(1) kjører en funksjon som
+● **Button**(1) kjører en funksjon som
 konverterer inputen basert på hva som
 står i Spinner. Tom input skal gi
 feilmelding i form av en Snackbar.
 
-● Text skal vise det konverterte
+● **Text** skal vise det konverterte
 resultatet.
 
 
-● Button(2) skal sende brukeren til
+● **Button**(2) skal sende brukeren til
 neste aktivitet. Button(2) skal
 plasseres helt nederst på skjermen, og
 skal være like bred som skjermen.
@@ -208,7 +207,7 @@ data i denne hvis nødvendig. Opprett en data class kalt Question.
 Spørsmål-objektene skal inneholde en string: spørsmålet, og boolean: sann/usann.
 Spørsmålene må du lage selv, og det skal være minimum tre spørsmål.
 
-###Tips:
+**Tips**:
 ● Basert på en indeks i QuizUiState (counter) kan Text(1) vise gjeldende
 spørsmål.
 
@@ -226,7 +225,7 @@ nytt.
 
 ● True/False-knappene skal bli gjennomsiktige når quizen er gjennomført.
 
-### Filnavn:
+**Filnavn**:
 ui/quiz/Quiz.kt, ui/quiz/QuizUiState.kt, data/Questions.kt
 
 

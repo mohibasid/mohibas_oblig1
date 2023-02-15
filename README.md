@@ -138,7 +138,7 @@ localFocusManager.clearFocus()
 ui/palindrome/PalindromeScreen.kt
 
 
-##Del 2 - Konverterer
+## Del 2 - Konverterer
 
 I denne deloppgaven skal du lage skjermen ConverterScreen. Denne skjermen skal
 konvertere volum i form av væske fra det imperiske system til liter (L). Det skal være
@@ -146,10 +146,14 @@ mulig å konvertere fra følgende imperiske enheter: fluid ounce (fl oz), cup (c
 (gal) og hogshead.
 
 ### Konverteringstabell
+
 *1,0 fluid ounce = 0,02957 L
-1,0 cup = 0,23659 L
-1,0 gallon = 3,78541 L
-1,0 hogshead = 238,481 L
+
+*1,0 cup = 0,23659 L
+
+*1,0 gallon = 3,78541 L
+
+*1,0 hogshead = 238,481 L
 
 De fire ulike imperiske enhetene skal vises i en ExposedDropdownMenu slik at
 brukeren enkelt kan velge hvilken enhet det ønskes å konvertere fra. For å gjøre dette

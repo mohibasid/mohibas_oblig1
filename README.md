@@ -35,11 +35,12 @@ fristen fredag 10. februar 23:59.
 ● https://developer.android.com/reference/kotlin/androidx/compose/material3/package-summary#ExposedDropdownMenuBox(kotlin.Boolean,kotlin.Function1,androidx.compose.ui.Modifier,kotlin.Function1)
 
 ● Navigasjon mellom skjermer:
+
 https://developer.android.com/jetpack/compose/navigation
 
 ● https://m3.material.io/components/snackbar/overview
 
-##Komme i gang
+## Komme i gang
 
 Opprett et nytt Android Studio-prosjekt, sett prosjektnavn til:
 [ditt uio-brukernavn]_oblig1.
@@ -49,7 +50,7 @@ programmeringsspråk.
 
 Velg API 23 som target SDK/Minimum API Level.
 
-##Versjoner og gradle
+## Versjoner og gradle
 
 Siden versjonene som automatisk settes på de forskjellige pakkene av android studio
 når prosjektet opprettes kan avvike med de som er i dokumentasjonen kan det oppstå
@@ -64,7 +65,7 @@ nyeste versjonen av material3 1.1.0-alpha05 så oppdater også denne.
 I prosjektet sin build.gradle endre “compose_version” til 1.3.3 Endre også
 avhengigheten org.jetbrains.kotlin.android til 1.8.0 i denne fila.
 
-##Del 0 - Forberede filer og sette opp navigasjon
+# Del 0 - Forberede filer og sette opp navigasjon
 
 Start med å lage tre sub-pakker i ui-mappen for hver av deloppgavene. Opprett
 deretter 3 filer i hver av disse mappene slik at filstiene blir som følger:
@@ -91,7 +92,7 @@ Det skal settes opp 3 navigasjons-ruter:
 - “unitconverter” skal kobles opp til UnitConverterScreen()-funksjonen
 - “quiz” skal kobles opp til QuizScreen()-funksjonen der “palindrome” skal være satt som startDestination.
 
-##Del 1 - Palindrom
+## Del 1 - Palindrom
 I denne deloppgaven skal du lage den første skjermen: en palindrom-sjekker som
 skal hete PalindromeScreen. Denne skjermen skal kort forklart: ta input fra bruker,
 sjekke om input er et palindrom eller ikke og vise resultatet til brukeren.
@@ -104,79 +105,99 @@ Palindrom Ikke palindrom
 “bob” “ivar”
 “Hannah” “Alpakka”
 “123454321” “1234”
-PalindromeScreen skal inneholde følgende composables og funksjonalitet
-TextField skal ta input fra bruker.
-Skal ha en label som redegjør for hva
-brukeren skal skrive inn.
-Button(1) skal kjøre en funksjon som sjekker
-om gitt input er et palindrom eller ikke.
-Text som viser resultat:
-● Skal vise til brukeren om input er et
-palindrom eller ikke.
-Button(2) sender brukeren til neste skjerm:
+
+### PalindromeScreen skal inneholde følgende composables og funksjonalitet
+
+### TextField skal ta input fra bruker.Skal ha en label som redegjør for hva brukeren skal skrive inn.
+
+### Button(1) skal kjøre en funksjon som sjekker om gitt input er et palindrom eller ikke.
+
+### Text som viser resultat:
+● Skal vise til brukeren om input er et palindrom eller ikke.
+
+### Button(2) sender brukeren til neste skjerm:
 ● Knappen skal plasseres helt nederst på
 skjermen.
+
 ● Knappen skal være like bred som
 skjermen.
-4
-Viktig:
+
+### Viktig:
 ● Alle elementer i skjermen skal være midtstilt.
+
 ● Legg til funksjonalitet som gjør at TextField tømmes for innhold når brukeren
 trykker på Button(1).
+
 ● Legg til funksjonalitet som gjør at skjermtastaturet lukker seg når brukeren
 trykker på Button(1). Benytt dere av LocalFocusManager.current og
 localFocusManager.clearFocus()
-Filnavn:
+
+### Filnavn:
 ui/palindrome/PalindromeScreen.kt
-5
-Del 2 - Konverterer
+
+
+##Del 2 - Konverterer
+
 I denne deloppgaven skal du lage skjermen ConverterScreen. Denne skjermen skal
 konvertere volum i form av væske fra det imperiske system til liter (L). Det skal være
 mulig å konvertere fra følgende imperiske enheter: fluid ounce (fl oz), cup (cp), gallon
 (gal) og hogshead.
-Konverteringstabell
-1,0 fluid ounce = 0,02957 L
+
+### Konverteringstabell
+*1,0 fluid ounce = 0,02957 L
 1,0 cup = 0,23659 L
 1,0 gallon = 3,78541 L
 1,0 hogshead = 238,481 L
+
 De fire ulike imperiske enhetene skal vises i en ExposedDropdownMenu slik at
 brukeren enkelt kan velge hvilken enhet det ønskes å konvertere fra. For å gjøre dette
 skal du lage en string-array i strings.xml-filen og legge inn de imperiske enhetene.
-Viktig:
+
+### Viktig:
 ● Tastaturet skal være et talltastatur (numpad).
+
 ● Appen skal ikke krasje ved ugyldig (f.eks. tekst eller tom input), og da heller
 vise en feilmelding til bruker i form av en Snackbar.
+
 ● Outputen skal kun ha to desimaler.
+
 ● Legg til funksjonalitet som gjør at skjermtastaturet lukker seg når brukeren
 trykker på Button(1).
-Utforming
+
+### Utforming
 Det skal være en TextField-funksjon som tar input fra brukeren. Under TextField
 skal det være en ExposedDropdownMenu. Under denne skal det plasseres en
 Button(1), og når denne blir trykket på, skal inputen konverteres. Resultatet av
 konverteringen skal vises i en Text-funksjon. Nederst på skjermen skal det være en
 Button(2) som sender brukeren til siste deloppgave (QuizScreen).
-6
-ConverterScreen skal inneholde følgende composables og funksjonalitet
+
+### ConverterScreen skal inneholde følgende composables og funksjonalitet
 ● TextField skal ta input fra bruker.
 Skal inneholde et hint som redegjør
 for hva brukeren skal skrive inn.
+
 ● ExposedDropdownMenu som gjør
 det mulig å velge mellom de fire
 enhetene nevnt tidligere.
+
 ● Button(1) kjører en funksjon som
 konverterer inputen basert på hva som
 står i Spinner. Tom input skal gi
 feilmelding i form av en Snackbar.
+
 ● Text skal vise det konverterte
 resultatet.
+
+
 ● Button(2) skal sende brukeren til
 neste aktivitet. Button(2) skal
 plasseres helt nederst på skjermen, og
 skal være like bred som skjermen.
-Filnavn:
+
+### Filnavn:
 ui/unitconverter/UnitConverterScreen.kt
-7
-Del 3 - Quiz
+
+## Del 3 - Quiz
 I denne deloppgaven skal du utvide QuizScreen som ble opprettet i del 2, og lage en
 liten quiz som skal stille minst tre fleip/fakta spørsmål. Du skal benytte deg av
 objektorientering, og representere hvert enkelt spørsmål i quizen som et
@@ -186,30 +207,37 @@ List<Question> og hvor mange riktige spørsmål som er besvart, legg til ekstra
 data i denne hvis nødvendig. Opprett en data class kalt Question.
 Spørsmål-objektene skal inneholde en string: spørsmålet, og boolean: sann/usann.
 Spørsmålene må du lage selv, og det skal være minimum tre spørsmål.
-Tips:
+
+###Tips:
 ● Basert på en indeks i QuizUiState (counter) kan Text(1) vise gjeldende
 spørsmål.
+
 ● Hold orden på indeksene, slik at du ikke prøver å aksessere tomme verdier i
 listen.
+
 ● La QuizUiState holde styr på hvilket spørsmål som er nåværende.
 Viktig:
+
 ● Text (2) skal når alle spørsmålene er gjennomgått vise “Poeng: [poeng / antall
 mulige poeng]”
+
 ● Button(3) skal være en “reset”-knapp som gjør at brukeren kan ta quizen på
 nytt.
+
 ● True/False-knappene skal bli gjennomsiktige når quizen er gjennomført.
-Filnavn:
+
+### Filnavn:
 ui/quiz/Quiz.kt, ui/quiz/QuizUiState.kt, data/Questions.kt
-8
-QuizScreen skal inneholde følgende composables og funksjonalitet
+
+
+### QuizScreen skal inneholde følgende composables og funksjonalitet
 ● Text(1) viser spørsmålene til brukeren.
-● Button(1) skal representere “Fakta”.
-Denne knappen skal være grønn.
-● Button(2) skal representere “Fleip”.
-Denne knappen skal være rød.
-● Text(2) skal vise antall poeng.
-Oppdateres for hvert svar. Riktig svar
-gir 1 poeng, feil gir 0 poeng.
-● Button(3) skal starte quizen på nytt og
-plasseres helt nederst på skjermen.
-9
+
+● Button(1) skal representere “Fakta”. Denne knappen skal være grønn.
+
+● Button(2) skal representere “Fleip”. Denne knappen skal være rød.
+
+● Text(2) skal vise antall poeng. Oppdateres for hvert svar. Riktig svar gir 1 poeng, feil gir 0 poeng.
+
+● Button(3) skal starte quizen på nytt og plasseres helt nederst på skjermen.
+

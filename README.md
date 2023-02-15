@@ -1,6 +1,7 @@
 # mohibas_oblig1 - Obligatorisk innlevering
 
 Introduksjon
+
 I denne obligen skal du lage en applikasjon i Android Studio. Her vil du bli kjent
 med forskjellige verktøy, og noen nyttige komponenter som ofte brukes i
 Android-utvikling. Kotlin skal benyttes som programmeringsspråk, og Jetpack
